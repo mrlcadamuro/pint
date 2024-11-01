@@ -1,0 +1,112 @@
+body {
+    background-color: #f8f9fa; /* Cor de fundo geral */
+}
+
+#search-background {
+    background-image: url('/img/1.png'); /* Adicione o caminho da sua imagem */
+    background-size: cover; /* Cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    padding: 40px 0; /* Espaçamento superior e inferior */
+    color: #ffffff; /* Cor do texto na área de busca */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Sombra para destacar o texto */
+}
+
+#search-container h2 {
+    font-size: 2rem; /* Tamanho da fonte maior */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+#search-container input {
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    border: none; /* Remove a borda padrão */
+}
+
+#produtos-container {
+    margin-top: 30px; /* Margem acima do contêiner de produtos */
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Empilha elementos verticalmente */
+    height: 100%; /* Garante a mesma altura para todos os cartões */
+    border: none; /* Remove a borda padrão */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transições suaves */
+    overflow: hidden; /* Esconde o conteúdo que transborda */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Eleva o cartão ao passar o mouse */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada ao passar o mouse */
+}
+
+.card-img-top {
+    width: 100%; /* Imagem ocupa toda a largura do cartão */
+    height: 200px; /* Altura fixa */
+    object-fit: cover; /* Cobre toda a área do cartão */
+    border-top-left-radius: 10px; /* Bordas arredondadas no topo */
+    border-top-right-radius: 10px; /* Bordas arredondadas no topo */
+}
+
+.card-body {
+    padding: 20px; /* Espaçamento interno do corpo do cartão */
+    background-color: #ffffff; /* Fundo branco para o corpo do cartão */
+    border-bottom-left-radius: 10px; /* Bordas arredondadas na parte inferior */
+    border-bottom-right-radius: 10px; /* Bordas arredondadas na parte inferior */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Tamanho do título */
+    margin: 10px 0; /* Margens em torno do título */
+    color: #333; /* Cor do texto do título */
+}
+
+.card-descripicion {
+    font-size: 0.9rem; /* Tamanho da descrição */
+    color: #666; /* Cor da descrição */
+    margin-bottom: 15px; /* Margem abaixo da descrição */
+}
+
+.card-value {
+    font-size: 1.5rem; /* Tamanho do preço */
+    color: #28a745; /* Cor do preço */
+    margin: 10px 0; /* Margens em torno do preço */
+    text-align: end; /* Alinha o preço à direita */
+}
+
+#cards-container {
+    display: flex; /* Usar Flexbox para layout */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+    justify-content: center; /* Centraliza os cartões */
+}
+
+.card a.btn {
+    width: 120px; /* Largura fixa para o botão de compra */
+    border-radius: 20px; /* Bordas arredondadas */
+}
+
+.card button {
+    width: 50px; /* Largura fixa para o botão de adicionar ao carrinho */
+    border-radius: 20px; /* Bordas arredondadas */
+}
+
+.btn-block {
+    display: block; /* Faz com que os botões ocupem toda a largura disponível */
+}
+
+@media (min-width: 768px) { /* Para telas médias e maiores */
+    #cards-container .card {
+        flex: 0 0 calc(20% - 20px); /* 20% de largura menos margens para 5 produtos por linha */
+        margin: 10px; /* Margem para espaçamento entre os cartões */
+    }
+}
+
+@media (max-width: 767.98px) { /* Para telas menores */
+    #cards-container .card {
+        flex: 0 0 calc(50% - 20px); /* 50% de largura para telas pequenas (2 por linha) */
+        margin: 10px; /* Margem para espaçamento entre os cartões */
+    }
+}
+

@@ -1,0 +1,81 @@
+/* Estilização da fonte e fundo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+}
+
+/* Configurações gerais do container */
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 5%;
+}
+
+/* Estilo da seção de boas-vindas (esquerda) */
+.left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2%;
+}
+
+.welcome-info {
+    max-width: 80%;
+    color: #65727f;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.welcome-title {
+    color: black;
+}
+
+/* Linha divisória central */
+.divider {
+    width: 2px;
+    height: 60%;
+    background-color: #ddd;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilo da seção do formulário de login (direita) */
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2%;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 350px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideInRight 1s ease-in-out;
+}
+
+/* Animação de entrada */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

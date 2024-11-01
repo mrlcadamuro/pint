@@ -1,0 +1,134 @@
+/* Estilos gerais do body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #212529; /* Cor de fundo escura */
+    color: #f8f9fa; /* Cor do texto clara */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #212529; /* Cor de fundo do cabeçalho */
+    color: #ffffff; /* Cor do texto */
+}
+
+/* Estilo do menu lateral */
+.sidebar {
+    background-color: #212529; /* Cor de fundo do menu lateral */
+    color: #ffffff; /* Cor do texto */
+}
+
+.sidebar h4 {
+    color: #ffffff; /* Cor do título do menu */
+}
+
+/* Estilo dos links do menu */
+.nav-link {
+    color: #ffffff; /* Cor do texto do menu */
+    transition: background-color 0.3s; /* Transição suave para o hover */
+}
+
+.nav-link:hover {
+    background-color: #a9a9a9; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo do conteúdo principal */
+main {
+    padding: 20px; /* Espaçamento interno */
+    background-color: #323232; /* Cor de fundo do conteúdo */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilo da tabela */
+.table {
+    background-color: #434343; /* Cor de fundo da tabela */
+    color: #ffffff; /* Cor do texto da tabela */
+}
+
+.table th,
+.table td {
+    vertical-align: middle; /* Alinhamento vertical do texto */
+}
+
+.table th {
+    background-color: #212529; /* Cor de fundo do cabeçalho da tabela */
+}
+
+/* Estilo dos botões de ações */
+.btn {
+    margin-right: 10px; /* Espaçamento entre os botões */
+    color: #ffffff;
+}
+
+.alert {
+    margin-top: 20px; /* Margem acima da mensagem de alerta */
+    background-color: #8d959e; /* Cor de fundo da mensagem de alerta */
+    color: white; /* Cor do texto da mensagem de alerta */
+}
+
+/* Estilos para o formulário de venda */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px; /* Diminuído o padding para reduzir o tamanho */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.produto-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px; /* Diminuído o padding */
+    margin-bottom: 15px;
+    background-color: #434343;
+    position: relative;
+    display: flex; /* Adicionando flexbox para controle de layout */
+    flex-direction: column; /* Organizando os elementos em coluna */
+}
+.quantidade-controls {
+    margin-top: 10px; /* Espaço acima dos controles de quantidade */
+    display: flex; /* Usando flexbox para organizar os botões de quantidade */
+    align-items: center; /* Centralizando verticalmente os itens */
+}
+
+.produto-item h3 {
+    margin: 10px 0;
+}
+
+.preco-unitario {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #ffffff; /* Cor do texto para o preço */
+}
+
+.remove-produto {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.actions-container {
+    display: flex; /* Usando flexbox para alinhar os elementos */
+    justify-content: space-between; /* Espaço entre os elementos */
+    align-items: center; /* Centraliza verticalmente */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+.valor-total-container {
+    text-align: right; /* Alinha o texto à direita */
+    flex-grow: 1; /* Permite que o contêiner do valor total cresça */
+    margin: 0 20px; /* Espaço entre o total e os botões */
+}

@@ -1,0 +1,179 @@
+/* Reset CSS básico para remover margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do documento */
+body {
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    color: #ffffff; /* Cor do texto */
+}
+
+
+/* Estilo da Seção Hero */
+.hero-section {
+    background-image: url('/img/2.png'); /* Caminho da imagem de fundo */
+    background-size: cover; /* A imagem cobre toda a seção */
+    background-position: center; /* A imagem é centralizada */
+    height: 400px; /* Altura da seção */
+    display: flex; /* Usando flexbox para centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    color: white; /* Cor do texto */
+    position: relative; /* Para posicionar elementos filhos */
+    text-align: center; /* Centraliza o texto */
+}
+
+.hero-image {
+    width: 100%; /* A imagem ocupa toda a largura da seção */
+    height: 100%; /* A imagem ocupa toda a altura da seção */
+    object-fit: cover; /* Faz a imagem cobrir a área sem distorção */
+}
+
+.overlay {
+    position: absolute; /* Para sobrepor o conteúdo na imagem */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adiciona um overlay escuro */
+    display: flex; /* Usando flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.content {
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo da Seção de Apresentação */
+#apresentacao {
+    background-color: #f9f9f9; /* Fundo claro */
+    padding: 60px 0; /* Espaçamento vertical */
+}
+
+#apresentacao h2 {
+    font-size: 2.5rem; /* Tamanho do título */
+    margin-bottom: 20px; /* Margem abaixo do título */
+}
+
+#apresentacao p {
+    font-size: 1.2rem; /* Tamanho do texto */
+    max-width: 800px; /* Largura máxima do texto */
+    margin: 0 auto; /* Centraliza o texto */
+}
+
+/* Estilo da Seção de Texturas e Pinturas */
+#texturas-e-pinturas {
+    padding: 60px 0; /* Espaçamento vertical */
+    background-color: #fff; /* Fundo branco */
+}
+
+#texturas-e-pinturas h2 {
+    font-size: 2.5rem; /* Tamanho do título */
+    margin-bottom: 40px; /* Margem abaixo do título */
+}
+
+.text-container {
+    font-size: 1.2rem; /* Tamanho do texto */
+    text-align: center; /* Centraliza o texto */
+    max-width: 600px; /* Largura máxima para centralização */
+    margin: 0 auto; /* Centraliza o contêiner no meio da página */
+    padding: 20px; /* Espaçamento interno */
+    color: #ffffff; /* Cor do texto */
+}
+
+
+.card {
+    opacity: 0;
+    transform: translateY(0px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o card ao passar o mouse */
+}
+
+.card.expanded {
+    transform: scale(1.1); /* Aumenta o card quando clicado */
+    z-index: 1; /* Garante que o card expandido fique acima dos outros */
+}
+
+.card-body {
+    padding: 1.5rem; /* Espaçamento interno */
+}
+
+
+.card:hover {
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Tamanho do título do cartão */
+    margin-bottom: 15px; /* Margem abaixo do título do cartão */
+}
+
+.card-text {
+    font-size: 1rem; /* Tamanho do texto do cartão */
+}
+
+/* Estilo para o botão */
+.btn {
+    border-radius: 20px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Preenchimento do botão */
+}
+
+.btn-outline-light {
+    color: #fff; /* Cor do texto do botão */
+    border: 2px solid #fff; /* Borda do botão */
+}
+
+.btn-outline-light:hover {
+    background-color: #fff; /* Fundo do botão ao passar o mouse */
+    color: #000000; /* Cor do texto ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 300px; /* Altura reduzida para telas menores */
+    }
+
+    #apresentacao h2 {
+        font-size: 2rem; /* Tamanho do título reduzido */
+    }
+
+    #texturas-e-pinturas h2 {
+        font-size: 2rem; /* Tamanho do título reduzido */
+    }
+}
+
+#apresentacao {
+    background-image: url('/img/1.png'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    color: white; /* Altera a cor do texto para branco */
+    padding: 50px 0; /* Adiciona espaçamento acima e abaixo */
+}
+#texturas-e-pinturas {
+    background-image: url('/img/3.png'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+    padding: 50px 0; /* Adiciona espaçamento acima e abaixo */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #d1dae3; /* Cor da linha */
+    margin: 40px 0; /* Margem acima e abaixo da linha */
+}

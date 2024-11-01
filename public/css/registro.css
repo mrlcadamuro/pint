@@ -1,0 +1,134 @@
+/* Estilização da fonte e fundo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f8ff;
+}
+
+/* Configurações gerais do container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px; /* Espaco lateral */
+}
+
+/* Estilo da seção de boas-vindas (esquerda) */
+.left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2%;
+    text-align: center; /* Centraliza texto */
+}
+
+/* Estilo da seção do formulário de registro (direita) */
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2%;
+}
+
+/* Estilo do formulário */
+.login-form {
+    width: 100%;
+    max-width: 400px; /* Largura máxima do formulário */
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    animation: slideInRight 1s ease-in-out;
+}
+
+/* Animações de entrada */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo para os elementos do formulário */
+input.form-control {
+    border: 1px solid #ced4da; /* Cor da borda */
+    border-radius: 5px; /* Borda arredondada */
+    transition: border-color 0.3s; /* Transição da cor da borda */
+}
+
+input.form-control:focus {
+    border-color: #80bdff; /* Cor da borda em foco */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra em foco */
+}
+
+/* Estilo do botão */
+.btn-primary {
+    background-color: #007bff; /* Cor do botão */
+    border-color: #007bff; /* Cor da borda do botão */
+    transition: background-color 0.3s, border-color 0.3s; /* Transição */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+    border-color: #004085; /* Cor da borda ao passar o mouse */
+}
+
+/* Texto de ajuda */
+.text-center p {
+    color: #6c757d; /* Cor do texto de ajuda */
+    font-size: 0.9em; /* Tamanho do texto de ajuda */
+}
+
+/* Estilo da linha divisória */
+.divider {
+    width: 2px;
+    height: 60%;
+    background-color: #ddd;
+    margin: 0 20px; /* Margem lateral */
+}
+
+/* Efeitos de animação para a seção de boas-vindas */
+.left-section h1,
+.left-section p {
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(20px); /* Deslocamento inicial */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.login-form {
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateX(50px); /* Deslocamento inicial */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os elementos em telas menores */
+    }
+
+    .left-section, .right-section {
+        width: 100%; /* Ocupa 100% da largura */
+        padding: 0; /* Remove padding lateral */
+        margin-bottom: 20px; /* Espaço inferior entre seções */
+    }
+
+    .login-form {
+        max-width: 90%; /* Largura máxima em telas menores */
+    }
+}
