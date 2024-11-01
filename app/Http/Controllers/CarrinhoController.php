@@ -52,3 +52,4 @@ class CarrinhoController extends Controller
         return redirect()->route('carrinho.index')->with('mensagem', 'Produto removido do carrinho.');
     }
 }
+

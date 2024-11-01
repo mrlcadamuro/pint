@@ -23,7 +23,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/produtos/index">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/produtos">Produtos</a></li>
                         <li class="nav-item"><a class="nav-link" href="/servicos">Serviços</a></li>
                         <li class="nav-item"><a class="nav-link" href="/sobre">Sobre Nós</a></li>
                         <li class="nav-item"><a class="nav-link" href="/carrinho/index">Carrinho</a></li>

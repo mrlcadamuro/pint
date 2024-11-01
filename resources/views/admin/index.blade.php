@@ -16,7 +16,7 @@
         <header class="d-flex justify-content-between align-items-center p-3">
             <h1>@yield('header-title', 'Admin Dashboard')</h1>
             <div>
-                <a href="{{ url('/home') }}" class="btn btn-custom">Sair</a>
+                <a href="{{ url('/') }}" class="btn btn-custom">Sair</a>
             </div>
         </header>
 
