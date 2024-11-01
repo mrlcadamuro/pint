@@ -11,17 +11,13 @@ use App\Http\Controllers\PagamentoController;
 
 
 Route::middleware('auth')->group(function () {
-
-Route::get('/carrinho/index', [CarrinhoController::class, 'index'])->name('carrinho.index');
-
-
-Route::get('/produtos/exibir', [ProdutoController::class, 'exibir'])->name('produtos.exibir');
-Route::resource('produtos', ProdutoController::class)->except(['show']);
-Route::get('/produtos/{id_produto}', [ProdutoController::class, 'show'])->name('produtos.show');
-Route::post('/produtos/adicionar/{id}', [ProdutoController::class, 'adicionar'])->name('produtos.adicionar');
-
-
-    
+    //carrinho
+    Route::get('/carrinho/index', [CarrinhoController::class, 'index'])->name('carrinho.index');
+    //Produto
+    Route::get('/produtos/exibir', [ProdutoController::class, 'exibir'])->name('produtos.exibir');
+    Route::resource('produtos', ProdutoController::class)->except(['show']);
+    Route::get('/produtos/{id_produto}', [ProdutoController::class, 'show'])->name('produtos.show');
+    Route::post('/produtos/adicionar/{id}', [ProdutoController::class, 'adicionar'])->name('produtos.adicionar');
     // Vendedores
     Route::prefix('vendedores')->group(function () {
         Route::get('/index', [VendedorController::class, 'index'])->name('vendedores.index');
@@ -31,7 +27,6 @@ Route::post('/produtos/adicionar/{id}', [ProdutoController::class, 'adicionar'])
         Route::put('/{id_vendedor}', [VendedorController::class, 'update'])->name('vendedores.update'); 
         Route::delete('/{id_vendedor}', [VendedorController::class, 'destroy'])->name('vendedores.destroy'); 
     });
-
     // Clientes
     Route::prefix('clientes')->group(function () {
         Route::get('/index', [ClienteController::class, 'index'])->name('clientes.index');
@@ -41,7 +36,7 @@ Route::post('/produtos/adicionar/{id}', [ProdutoController::class, 'adicionar'])
         Route::put('/{id_cliente}', [ClienteController::class, 'update'])->name('clientes.update');
         Route::delete('/{id_cliente}', [ClienteController::class, 'destroy'])->name('clientes.destroy');
     });
-
+    //Vendas
     Route::prefix('vendas')->group(function () {
         Route::get('/index', [VendaController::class, 'index'])->name('vendas.index');
         Route::get('/create', [VendaController::class, 'create'])->name('vendas.create');
@@ -50,7 +45,6 @@ Route::post('/produtos/adicionar/{id}', [ProdutoController::class, 'adicionar'])
         Route::put('/{id_venda}', [VendaController::class, 'update'])->name('vendas.update');
         Route::delete('/{id_venda}', [VendaController::class, 'destroy'])->name('vendas.destroy');
     });
-    
 
     Route::get('/login', function () {
         return view('admin.index');
@@ -59,7 +53,6 @@ Route::post('/produtos/adicionar/{id}', [ProdutoController::class, 'adicionar'])
     Route::get('/admin', function () {
         return view('admin.index'); 
     })->name('admin.index');
-
 });
 
 //rotas que não precisam de segurança

@@ -54,6 +54,11 @@
         </table>
         <a href="/produto" class="btn btn-warning">Adicionar Produto</a>
         <a href="/pagamento" class="btn btn-success">Finalizar Compra</a>
+        <form action="/limpar-carrinho" method="POST" style="display:inline;">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Limpar Carrinho</button>
+        </form>
         <div class="total">
             <h3>Total: R$ {{ number_format($total, 2, ',', '.') }}</h3>
         </div>
